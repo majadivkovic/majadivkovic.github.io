@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <title>The Code Review</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="top-section">
+            <h1 class="main-title">THE CODE REVIEW</h1>
+        </div>
+    </header>
+
+    <div class="main-container">
+
+        <div class="intro-section">
+
+            <h2 class="title">Signup for our newsletter</h2>
+            <p>Get the latest news on how your code is doing right in your inbox</p>
+
+        </div>
+
+        <form action="newsletter-form" method="POST">
+
+            <fieldset class="contact-section">
+
+                <legend class="form-heading title">Contact Information</legend>
+
+                <ul class="contact-flex">
+                    <li>
+                        <label for="name">Full Name</label>
+                        <input required type="text" id="name" name="user_name"  placeholder="Required">
+                    </li>
+                    <li>
+                        <label for="mail">Email Address</label>
+                        <input required type="email" id="mail" name="user_email"  placeholder="Required">
+                    </li>
+                    <li>
+                        <label for="phone">Phone Number</label>
+                        <input required type="tel" id="phone" name="user_phone">
+                    </li>
+                    <li>
+                        <label for="address">Street Address</label>
+                        <input type="text" id="address" name="user_address">
+                    </li>
+                    <li>
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="user_city">
+                    </li>
+                    <li>
+                        <label for="state">State</label>
+                        <select name="user_state" id="state">
+                            <option value="" disabled selected hidden>Choose State</option>
+                            <option value="alabama">Alabama</option>
+                            <option value="alaska">Alaska</option>
+                            <option value="califorina">California</option>
+                            <option value="florida">Florida</option>
+                            <option value="north Carolina">North Carolina</option>
+                            <option value="new York">New York</option>
+                        </select>
+                    </li>
+
+                    <li>
+                        <label for="zip-code">Zip Code</label>
+                        <input type="text" id="zip-code" name="user_zip-code">
+                    </li>
+                </ul>
+
+            </fieldset>
+
+            <fieldset class="newsletter-section">
+
+                <legend class="form-heading title">Newsletter</legend>
+
+                <h4>Select the newsletters you would like to receive</h4>
+
+                <ul class="newsletter-flex">
+                    <li>
+                        <input type="checkbox" id="html_news" value="html_news" name="news_option">
+                        <label for="html_news">Html News</label>
+                        
+                    </li>
+                    <li>
+                        <input type="checkbox" id="css_news" value="css_news" name="news_option">
+                        <label for="css_news">Css News</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="javascript_news" value="javascript_news" name="news_option">
+                        <label for="javascript_news">Javascript News</label>
+                    </li>
+                </ul>
+
+                <h4>Newsletter format</h4>
+
+                <ul class="newsletter-flex">
+                    <li>
+                        <input type="radio" id="html_format" value="html_format" name="format_option">
+                        <label for="html_format">Html format</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="plain_format" value="plain_format" name="format_option">
+                        <label for="plain_format">Plain text</label>
+                    </li>
+
+                    <li>
+                       <label for="user_feedback">Other topics you'd like to hear about</label>
+                        <textarea name="user_feedback" id="user_feedback" cols="35" rows="10"></textarea>
+                    </li>
+
+                    <li>
+                        <button type="submit">Sign Up</button>
+                    </li>
+                </ul>
+
+            </fieldset>
+
+        </form>
+
+        <footer>
+            <p id="copyright-text">Copyright The Code Review</p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

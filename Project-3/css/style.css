@@ -1,0 +1,185 @@
+body{
+  font-family: 'Oswald', sans-serif;
+  line-height: 1.5;
+  margin: 0 auto;
+  color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.title {
+  color: black;
+}
+
+/*Top Section Sytles*/
+
+.top-section {
+  background-color: #2D2F33;
+  color: white;
+  text-align: center;
+}
+
+.intro-section {
+  border-bottom: 3px solid black;
+  text-align: center;
+  background-color: #49D1CC;
+}
+
+.main-title {
+  margin-top: 0;
+}
+
+/*Main Section Styles*/
+
+.main-container {
+  margin: 0 0.5rem;
+}
+
+form {
+  margin-top: 0.1rem;
+  margin-bottom: 0;
+  border-top: 2px solid black;
+  padding: 1rem 0 0 0;
+  
+}
+
+.form-heading{
+  font-weight: bold;
+  font-size: 1.3rem;
+  padding-top: 20px;
+}
+
+fieldset { 
+  border:0px;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=text],input[type=email], input[type=tel],select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  background-color: white;
+  transition: .40s ease-in-out;
+}
+
+input:focus {
+  background-color:#49D1CC;
+}
+
+.contact-section{
+  border-bottom: 2px solid black;
+  padding-bottom: 2.5rem;
+  background-color: #f0f0f5;
+  
+}
+
+.contact-flex,
+.newsletter-flex {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contact-flex li {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.contact-flex > li > label {
+flex: 1 0 220px;
+max-width: 220px;
+}
+
+label[for=state]{
+  color: black;
+}
+
+#zip-code {
+  max-width: 33%;
+}
+
+.contact-flex > li > label + * {
+flex: 1 0 220px;
+}
+
+button[type=submit] {
+  background-color: #49d1cc;
+  color: white;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button[type=submit]:hover {
+  background-color: #49D1CC;
+}
+
+::placeholder {
+  font-style: italic;
+  text-align: end;
+  padding: 0 0.5rem;
+}
+
+input[type="checkbox"]:checked {
+  box-shadow: 1px 5px 14px 12px #49D1CC;
+}
+
+input[type="radio"]:checked {
+  box-shadow: 1px 5px 14px 12px #49D1CC;
+}
+
+
+
+#state {
+  font-style: italic;
+  color:gray;
+}
+
+.newsletter-section {
+  margin-top: 2rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  background-color: #f0f0f5;
+  
+  
+}
+
+label[for="user_feedback"] {
+  margin-top: 1rem;
+}
+
+#copyright-text{
+  text-align: center;
+  font-style: italic;
+}
+
+.newsletter-type {
+  margin-bottom: 1.5rem;
+}
+
+.newsletter-format {
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+
+  .main-container {
+      max-width: 35vw;
+      margin: 0 auto;
+  }
+
+  #zip-code {
+      max-width: 25%;
+  }
+
+}
