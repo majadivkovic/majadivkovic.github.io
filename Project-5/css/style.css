@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+}
+
+body {
+    background-color: #29293d;
+}
+
+header {
+    width: 90%;
+    margin: 40px auto 24px;
+    text-align: center;
+}
+
+.fuzzy {
+    width: 100%;
+    max-width: 480px;
+    height: 40px;
+    border-radius: 4px;
+    padding: 0px 0px 0px 12px;
+    font-size: 14px;
+    color: rgb(59, 72, 78);
+    border: none;
+    background-color: #ececec;
+}
+
+.fuzzy::placeholder {
+    color: #a0a0a0;
+  }
+
+.fuzzy:hover {
+    background-color: #e7e7e7;
+    transition: ease-in-out;
+    transition-duration: 0.15s;    
+}
+
+.fuzzy:focus {
+    background-color: #ffff1a;
+    box-shadow: 0px 4px 12px rgba(97, 97, 97, 0.1), 0px 2px 3px rgba(0, 0, 0, 0.1), 0px 1px 4px rgba(0, 0, 0, 0.1);
+    outline: 0;
+    transition: ease-in-out;
+    transition-duration: 0.15s;
+}
+
+
+
+.container {
+    width: 96%;
+    max-width: 960px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+
+.img-thumbnail {
+    padding: 16px;
+    margin: auto;
+    
+}
+
+img {
+    width: 250px;
+    border-radius: 2px;
+}
+
+.fancybox-caption__body {
+    border-radius: 2px;
+    background-color: black;
+    color: white;
+    padding: 8px;
+}
+
+/* =================================
+  Media Queries (Single column for older mobiles)
+==================================== */
+
+@media (min-width: 484px) {
+
+    .container {
+        flex-direction: row;
+    }
+
+    .img-thumbnail {
+        margin: 0;
+    }
+
+    img {
+        width: 200px;
+    }
+}
