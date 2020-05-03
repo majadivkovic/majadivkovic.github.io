@@ -1,0 +1,34 @@
+/* ============================================= */
+/*              Navigation                       */
+
+
+.nav {
+    padding-left: 0;
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+  
+    &-link {
+      text-align: center;
+      border-radius: $border-radius;
+      padding: 10px 0;
+      display: block;
+      width: 100%;
+      transition:
+              background-color .2s ease-in-out,
+              color .2s ease-in-out;
+    }
+  
+    &-link:hover {
+      color: $button-color;
+      background-color: $primary-color;
+    }
+    @media (min-width: $main-breakpoint) {
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      &-link {
+        flex-basis: 100px;
+      }
+    }
+  }

@@ -1,0 +1,26 @@
+@mixin button($background: null, $hover-lighten: 15%){
+    margin-top: $button-margin-top;
+    width: 100%;
+    color: $button-color;
+    border: none;
+    padding: $button-padding;
+    text-transform: uppercase;
+    border-radius: $border-radius;
+    transition: background .3s ease-in-out;
+    background-color: $background;
+  
+    &:hover{
+      background-color: lighten($background, $hover-lighten);
+    }
+  }
+  
+  
+  @mixin image($margin-top: null, $max-width: null, $max-height: null){
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: $margin-top;
+    max-width: $max-width;
+    max-height: $max-height;
+    @content;
+  }

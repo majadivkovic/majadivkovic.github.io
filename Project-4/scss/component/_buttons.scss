@@ -1,0 +1,34 @@
+  
+/* ============================================= */
+/*              Buttons                          */
+
+
+
+.default {
+    @include button($button-default);
+  }
+  
+  .error {
+    @include button($button-error);
+  }
+  
+  .info {
+    @include button($button-info);
+  }
+  
+  .success {
+    @include button($button-success);
+  }
+  
+  .warning {
+    @include button($button-warning);
+  }
+  
+  .btn {
+    @media (min-width: $main-breakpoint) {
+      padding: 10px 30px;
+      & + & {
+        margin-left: 10px;
+      }
+    }
+  }

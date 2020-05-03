@@ -1,0 +1,35 @@
+/* ============================================= */
+/*              Media Queries                    */
+
+@media (min-width: $main-breakpoint) {
+
+    .centered {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    [class^=col]{
+      display: flex;
+      justify-content: center;
+      margin-top: 0;
+      align-items: center;
+      & + & {
+        margin-left: 10px;
+      }
+    }
+  
+    .col{
+      @for $i from 1 through 12 {
+        &-#{$i}{
+          flex-basis: calc-flex($i);
+        }
+      }
+    }
+  
+    .logo {
+       margin-left: initial;
+       margin-right: initial;
+     }
+  
+  }

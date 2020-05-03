@@ -1,0 +1,42 @@
+/* ============================================= */
+/*              Grid System                      */
+
+
+.container {
+    padding: $container-padding;
+    @media (min-width: $main-breakpoint) {
+      max-width: 1400px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: column;
+    padding: 1em 10px;
+    @media (min-width: $main-breakpoint) {
+      flex-direction: row;
+    }
+  }
+  
+  [class^=col] {
+    margin-top: 10px;
+    flex-basis: 100%;
+    min-height: 25px;
+    padding: 10px;
+    border-radius: $border-radius;
+  }
+  
+  .theme.col{
+    @each $i, $color in $col-colors-map {
+      &-#{$i} {
+        background-color: $color;
+      }
+    }
+  }
+  
+  .card {
+    flex-basis: 100%;
+  }

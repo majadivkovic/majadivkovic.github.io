@@ -1,0 +1,80 @@
+/*
+  Color Variables
+*/
+
+$default-font-color: #777;
+$primary-color: #58e1c1;
+$link-color: #51ddfc;
+$button-color: #fff;
+$button-default: #51ddfc;
+$button-error: #e4757a;
+$button-info: #927bc1;
+$button-success: #63cc82;
+$button-warning: #fd7856;
+$image-frame-color: #ccc;
+$col-colors-map: (1 : #927bc1, 2: #fd7856,
+        3: #deb2ee, 4: #7ee6fd,
+        5: #88d9a0, 6: #4da2bb,
+        7: #ec9fa3, 8: #fd9f85,
+        9: #e4757a, 10: #63cc82,
+        11: #51ddfc, 12: #80e8d1);
+
+/*
+  Font Variables
+*/
+
+$default-font: 'Lato', sans-serif;
+$default-font-height: 1.45em;
+$headline-secondary-weight: 300;
+$link-font-weight: 700;
+
+/*
+  Media Queries
+*/
+$main-breakpoint: 768px;
+
+// Blockquote
+$blockquote-font-size: 1.0em;
+$blockquote-font-weight: 300;
+$blockquote-font-style: italic;
+$blockquote-margin-left: 20px;
+$blockquote-padding-left: 20px;
+$blockquote-border-size: 8px;
+$blockquote-border-type: solid;
+
+
+/*
+  Margins & Layout Variables
+*/
+
+$margin-left: 10px;
+$container-padding: 0 10px;
+
+/*
+  Other variables
+*/
+
+$border-radius: 5px;
+
+/*
+  Button Variables
+*/
+
+$button-margin-top: 15px;
+$button-padding: 10px 0;
+
+/*
+  Input Variables
+*/
+
+$input-margin: 10px auto 0;
+$input-border-size: 5px;
+$input-border-type: solid;
+
+/*
+  Image Variables
+*/
+
+$image-border-size: 1px;
+$image-border-type: solid;
+$image-padding: 13px;
