@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>WebApp</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- FONTS AND CSS -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/switches/toggle-switch-px.css">
+        <link rel="stylesheet" href="css/switches/toggle-switch-rem.css">
+        <link rel="stylesheet" href="css/switches/toggle-switch.css">
+        <link rel="stylesheet" href="css/chartist/chartist.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/grid_layout.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="scripts/chartist/chartist.js"></script>
+    </head>
+
+    <body>
+
+        <header>
+            <h1>WebApp</h1>
+            <!-- <img src="icons/icon-bell.svg" class="bell-icon" alt="Bell icon"> -->
+            <div class="bell-div">
+                <svg class="bell-icon" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="-5 -5 40 40" >
+                
+                    <path d="M24 18v-8c0-5.5-4.5-10-10-10S4 4.5 4 10v8l-4 8h9.1c.5 2.3 2.5 4 4.9 4s4.4-1.7 4.9-4H28l-4-8zM14 28c-1.3 0-2.4-.8-2.8-2h5.6c-.4 1.2-1.5 2-2.8 2zM3 24l3-6v-8c0-4.4 3.6-8 8-8s8 3.6 8 8v8l3 6H3z" fill="#fff"/>
+                
+                </svg>
+
+                <div class="badge"></div>
+                
+                <div id="notification-dropdown" class="hidden">
+                    <div class="notif">
+                        <p>You have 6 unreaded messages</p>
+                        <button class="x-button-notif">x</button>
+                    </div>
+                    <div class="notif">
+                        <p>You have 3 new followers</p>
+                        <button class="x-button-notif">x</button>
+                    </div>
+                    <div class="notif">
+                        <p>Your password expires in 7 days</p>
+                        <button class="x-button-notif">x</button>
+                    </div>
+                
+                </div>
+                
+            </div>
+            <img src="images/member-1.jpg" class="profile-picture" alt="profile picture">
+            <p>Victoria Chambers</p>
+        </header>
+
+        <main>
+            <nav>
+                <img src="icons/icon-dashboard.svg" class="dashboard icon" alt="dashboard icon">
+                <img src="icons/icon-members.svg" class="members icon" alt="members icon">
+                <img src="icons/icon-visits.svg" class="visits icon" alt="visits icon">
+                <img src="icons/icon-settings.svg" class="set icon" alt="settings icon">
+            </nav>
+
+            <div class="title-search">
+                <h2>Dashboard</h2>
+               <input type="text" placeholder="Search">
+
+            </div>
+
+            <div class="alert">
+                <p><strong>ALERT</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur venenatis varius nibh vel efficitur. Nam.</p>
+                <button class="x-button">x</button>
+            </div>
+
+            <div class="traffic">
+
+                <div class="title-switch-wrap">
+                <h4>TRAFFIC</h4>
+                
+                <!-- SWITCHES -->
+                <div class="switch-toggle switch-candy time-switch">
+                    <input id="hour" name="view3" type="radio">
+                    <label for="hour" onclick="">Hour</label>
+                  
+                    <input id="day" name="view3" type="radio">
+                    <label for="day" onclick="">Day</label>
+                  
+                    <input id="week" name="view3" type="radio">
+                    <label for="week" onclick="">Week</label>
+                  
+                    <input id="month" name="view3" type="radio">
+                    <label for="month" onclick="">Month</label>
+                  
+                    <a></a>
+                  </div>
+                </div>
+                <!-- TRAFFIC GRAPH -->
+                <!-- <div class="traffic-container"> -->
+                    <div class="hourly-traffic" >
+                        <script src="scripts/traffic-chart/traffic-chart-hourly.js"></script>
+                    </div>
+
+                    <div class="daily-traffic" >
+                        <script src="scripts/traffic-chart/traffic-chart-daily.js"></script>
+                    </div>
+
+                    <div class="weekly-traffic" >
+                        <script src="scripts/traffic-chart/traffic-chart-weekly.js"></script>
+                    </div>
+
+                    <div class="monthly-traffic" >
+                        <script src="scripts/traffic-chart/traffic-chart-monthly.js"></script>
+                    </div>
+                <!-- </div> -->
+                <!-- TRAFFIC GRAPH -->
+                
+            </div>
+            <div class="bar-graph">
+                <h4>DAILY TRAFFIC</h4>
+
+                <!-- BAR GRAPH -->
+                <div class="bar-graph-container">
+                       <script src="scripts/daily-graph.js"></script>
+                </div>
+                <!-- BAR GRAPH -->
+
+            </div>
+            <div class="donut">
+                <h4>MOBILE USERS</h4>
+                <!-- MOBILE GRAPH -->
+                <div class="doughnut-label-wrap">
+                    <div class="doughnut-container">
+                        <script src="scripts/mobile-doughnut.js"></script>
+                    </div>
+                    <div class="doughnut-labels">
+                        <p class="color-square"></p> <p class="color-label">Phones</p>
+                        <p class="color-square"></p> <p class="color-label">Tablets</p>
+                        <p class="color-square"></p> <p class="color-label">Desktop</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SOCIAL STATS-->
+            <div class="social-stats">
+                <h4>SOCIAL STATS</h4>
+                <div class="social-widget-wrapper">
+                    <div class="social-data">
+                        <svg class="twitter logo" xmlns="http://www.w3.org/2000/svg" viewBox="-5 -7 40 40" width="20px" height="20px"><path  d="M32 3.1c-1.2 0.5-2.4 0.9-3.8 1 1.4-0.8 2.4-2.1 2.9-3.6 -1.3 0.8-2.7 1.3-4.2 1.6C25.8 0.8 24 0 22.2 0c-3.6 0-6.6 2.9-6.6 6.6 0 0.5 0.1 1 0.2 1.5C10.3 7.8 5.5 5.2 2.2 1.2c-0.6 1-0.9 2.1-0.9 3.3 0 2.3 1.2 4.3 2.9 5.5 -1.1 0-2.1-0.3-3-0.8 0 0 0 0.1 0 0.1 0 3.2 2.3 5.8 5.3 6.4 -0.6 0.1-1.1 0.2-1.7 0.2 -0.4 0-0.8 0-1.2-0.1 0.8 2.6 3.3 4.5 6.1 4.6 -2.2 1.8-5.1 2.8-8.2 2.8 -0.5 0-1.1 0-1.6-0.1 2.9 1.9 6.4 3 10.1 3 12.1 0 18.7-10 18.7-18.7 0-0.3 0-0.6 0-0.8C30 5.6 31.1 4.4 32 3.1z" fill="WHITE"/></svg>
+                        <p class="name">Twitter</p>
+                        <p class="count">10,345</p>
+                    </div>
+                    <div class="social-data">
+                        <svg class="facebook logo" enable-background="new 0 0 56.693 56.693" height="56.693px" id="Layer_1" version="1.1" viewBox="0 0 56.693 56.693" width="56.693px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="white" d="M40.43,21.739h-7.645v-5.014c0-1.883,1.248-2.322,2.127-2.322c0.877,0,5.395,0,5.395,0V6.125l-7.43-0.029  c-8.248,0-10.125,6.174-10.125,10.125v5.518h-4.77v8.53h4.77c0,10.947,0,24.137,0,24.137h10.033c0,0,0-13.32,0-24.137h6.77  L40.43,21.739z"/></svg>
+                        <p class="name">Facebook</p>
+                        <p class="count">8,739</p>
+                    </div>
+                    <div class="social-data">
+                        <svg class="google logo" xmlns="http://www.w3.org/2000/svg" viewBox="-5 -7 40 40"><path d="M17.7 25.7c0-0.3 0-0.5-0.1-0.8 -0.1-0.2-0.1-0.5-0.2-0.7 -0.1-0.2-0.2-0.4-0.3-0.7 -0.2-0.2-0.3-0.4-0.4-0.6 -0.1-0.2-0.3-0.3-0.5-0.6 -0.2-0.2-0.4-0.4-0.5-0.5 -0.1-0.1-0.3-0.3-0.6-0.5 -0.3-0.2-0.5-0.4-0.6-0.4s-0.3-0.2-0.6-0.4c-0.3-0.2-0.5-0.4-0.6-0.4 -0.2 0-0.5 0-1 0 -0.7 0-1.4 0-2 0.1 -0.7 0.1-1.4 0.2-2.1 0.5 -0.7 0.2-1.3 0.5-1.9 0.9s-1 0.8-1.3 1.4c-0.3 0.6-0.5 1.3-0.5 2.1 0 0.9 0.2 1.7 0.7 2.3 0.5 0.7 1.1 1.2 1.8 1.6s1.5 0.7 2.3 0.9 1.6 0.3 2.4 0.3c0.8 0 1.5-0.1 2.2-0.2 0.7-0.2 1.3-0.4 1.9-0.8 0.6-0.3 1.1-0.8 1.4-1.4C17.5 27.2 17.7 26.5 17.7 25.7zM15.4 9.1c0-0.8-0.1-1.6-0.3-2.5 -0.2-0.9-0.5-1.7-0.9-2.5 -0.4-0.8-0.9-1.5-1.6-2 -0.7-0.5-1.5-0.8-2.3-0.8 -1.2 0-2.1 0.4-2.8 1.3 -0.7 0.9-1 1.9-1 3.2 0 0.6 0.1 1.2 0.2 1.9 0.1 0.7 0.4 1.3 0.7 2 0.3 0.7 0.7 1.3 1.1 1.8 0.4 0.5 0.9 1 1.5 1.3 0.6 0.3 1.2 0.5 1.9 0.5 1.2 0 2.1-0.4 2.7-1.2C15.1 11.4 15.4 10.4 15.4 9.1zM12.9 0h8.4l-2.6 1.5h-2.6c0.9 0.6 1.6 1.4 2.1 2.4s0.8 2.1 0.8 3.2c0 0.9-0.1 1.8-0.4 2.5 -0.3 0.7-0.7 1.3-1.1 1.8 -0.4 0.4-0.8 0.9-1.3 1.2 -0.4 0.4-0.8 0.8-1.1 1.2 -0.3 0.4-0.4 0.8-0.4 1.3 0 0.3 0.1 0.7 0.3 1 0.2 0.3 0.5 0.6 0.8 0.9 0.3 0.3 0.7 0.6 1.1 0.9 0.4 0.3 0.8 0.7 1.2 1.1 0.4 0.4 0.8 0.8 1.1 1.3 0.3 0.5 0.6 1 0.8 1.6 0.2 0.6 0.3 1.3 0.3 2 0 2.1-0.9 3.9-2.7 5.4 -1.9 1.7-4.6 2.5-8.1 2.5 -0.8 0-1.5-0.1-2.3-0.2 -0.8-0.1-1.6-0.3-2.3-0.6 -0.8-0.3-1.5-0.7-2.1-1.1 -0.6-0.4-1.1-1-1.5-1.7C1 27.6 0.8 26.9 0.8 26c0-0.8 0.2-1.6 0.7-2.6 0.4-0.8 1-1.5 1.8-2.1 0.8-0.6 1.8-1.1 2.8-1.4 1-0.3 2-0.5 3-0.7 0.9-0.1 1.9-0.2 2.9-0.3 -0.8-1.1-1.2-2-1.2-2.9 0-0.2 0-0.3 0-0.5 0-0.1 0.1-0.3 0.1-0.4 0-0.1 0.1-0.2 0.2-0.4 0.1-0.2 0.1-0.3 0.1-0.4 -0.5 0.1-1 0.1-1.3 0.1 -1.9 0-3.5-0.6-4.9-1.9 -1.4-1.3-2-2.8-2-4.7 0-1.8 0.6-3.4 1.8-4.8C6 1.7 7.5 0.8 9.3 0.4 10.5 0.1 11.7 0 12.9 0zM32.8 4.9v2.5h-4.9v4.9h-2.5V7.4h-4.9V4.9h4.9V0h2.5v4.9H32.8z" fill="white"/></svg>
+                        <p class="name">Google+</p>
+                        <p class="count">2,530</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="new-members">
+                <h4>NEW MEMBERS</h4>
+
+                <div>
+                    <img src="images/member-1.jpg" class="members-profile-pictures" alt="profile picture">
+                    <p class="name-email">Victoria Chambers<br>
+                    v.chambers@example.com</p>
+                    <p class="members-date">10/15/15</p>
+                </div>
+
+                <div>
+                    <img src="images/member-2.jpg" class="members-profile-pictures" alt="profile picture">
+                    <p class="name-email">Dale Byrd<br>
+                    d.byrd@example.com</p>
+                    <p class="members-date">10/15/15</p>
+                </div>
+
+                <div>
+                    <img src="images/member-3.jpg" class="members-profile-pictures" alt="profile picture">
+                    <p class="name-email">Dawn Wood<br>
+                    d.wood@example.com</p>
+                    <p class="members-date">10/15/15</p>
+                </div>
+
+                <div>
+                    <img src="images/member-4.jpg" class="members-profile-pictures" alt="profile picture">
+                    <p class="name-email">Dan Oliver<br>
+                    d.oliver@example.com</p>
+                    <p class="members-date">10/15/15</p>
+                </div>
+            </div>
+
+            <div class="recent">
+                <h4>RECENT ACTIVITY</h4>
+                <div>
+                    <img src="images/member-1.jpg" class="members-profile-pictures" alt="profile picture">
+                    <p class="name-email">Victoria Chambers commented on YourApp's CEO Tips<br>
+                        4 hours ago</p>
+                        <img src="icons/arrow.svg" class="recent-arrow" alt="arrow">
+                </div>
+
+                <div>
+                    <img src="images/member-2.jpg" class="members-profile-pictures" alt="profile picture">
+                    <p class="name-email">Dawn Wood liked the Facebook's Changes for 2016<br>
+                        5 hours ago</p>
+                        <img src="icons/arrow.svg" class="recent-arrow" alt="arrow">
+                </div>
+
+                <div>
+                    <img src="images/member-3.jpg" class="members-profile-pictures" alt="profile picture">
+                    <p class="name-email">Dawn Wood commented on Facebook's Changes for 2016<br>
+                        5 hours ago</p>
+                        <img src="icons/arrow.svg" class="recent-arrow" alt="arrow">
+                </div>
+                
+                <div>
+                    <img src="images/member-4.jpg" class="members-profile-pictures" alt="profile picture">
+                    <p class="name-email">Dan Oliver posted YourApp's SEO Tips<br>
+                        1 day ago</p>
+                        <img src="icons/arrow.svg" class="recent-arrow" alt="arrow">
+                </div>
+            
+            </div>
+
+            <div class="message">
+                <h4>MESSAGE USER</h4>
+                
+                <div class="overlay">
+                    <p>MESSAGE SENT</p>
+                    <button>CLOSE</button>
+                </div>
+                <form class="contact-form">
+                    
+                    <input class="search-usr" type="text" placeholder="Search for User">
+                    <textarea class="message-usr" placeholder="Message for User"></textarea>
+                    <button type="submit">SEND</button>
+                    
+                </form>
+
+                <div id="autocomplete">
+                    <p class="hint">Victoria Chambers</p>
+                    <p class="hint">Dale Byrd</p>
+                    <p class="hint">Dawn Wood</p>
+                    <p class="hint">Dan Oliver</p>
+                </div>
+
+            </div>
+            
+            
+
+            <div class="settings">
+                <h4>SETTINGS</h4>
+                <form class="settings-form">
+                <div class="switches">
+                    <p class="notifications" >Send Email Notifications</p>
+                    <label class="switch-light switch-candy" onclick="">
+                        <input type="checkbox" class="notif-switch">
+                    
+                        <!-- <strong>
+                        Send Email Notifications
+                        </strong> -->
+                    
+                        <span>
+                        <span>Off</span>
+                        <span>On</span>
+                        <a></a>
+                        </span>
+                    </label>
+
+                    <p class="set-public">Set Profile to Public</p>
+                    <label class="switch-light switch-candy" onclick="">
+                        <input type="checkbox" class="public-switch">
+                    
+                        <!-- <strong>
+                            Set Profile to Public
+                        </strong>
+                     -->
+                        <span>
+                        <span>Off</span>
+                        <span>On</span>
+                        <a></a>
+                        </span>
+                    </label>
+                </div>
+
+                <div class="settings-buttons">
+                    
+                        <select>
+                            <option value="0">Select Timezone</option>
+                            <option value="GMT -12:00" >(GMT -12:00) Eniwetok, Kwajalein</option>
+                            <option value="GMT -11:00" >(GMT -11:00) Midway Island, Samoa</option>
+                            <option value="GMT -10:00" >(GMT -10:00) Hawaii</option>
+                            <option value="GMT -9:00"  >(GMT -9:00) Alaska</option>
+                            <option value="GMT -8:00"  >(GMT -8:00) Pacific Time (US &amp; Canada)</option>
+                            <option value="GMT -7:00"  >(GMT -7:00) Mountain Time (US &amp; Canada)</option>
+                            <option value="GMT -6:00"  >(GMT -6:00) Central Time (US &amp; Canada), Mexico City</option>
+                            <option value="GMT -5:00"  >(GMT -5:00) Eastern Time (US &amp; Canada), Bogota, Lima</option>
+                            <option value="GMT -4:30">(GMT -4:30) Caracas</option>
+                            <option value="GMT -4:00"  >(GMT -4:00) Atlantic Time (Canada), La Paz, Santiago</option>
+                            <option value="GMT -3:30">(GMT -3:30) Newfoundland</option>
+                            <option value="GMT -3:00"  >(GMT -3:00) Brazil, Buenos Aires, Georgetown</option>
+                            <option value="GMT -2:00"  >(GMT -2:00) Mid-Atlantic</option>
+                            <option value="GMT -1:00"  >(GMT -1:00 hour) Azores, Cape Verde Islands</option>
+                            <option value="GMT 0:00"   >(GMT) Western Europe Time, London, Lisbon, Casablanca, Greenwich</option>
+                            <option value="GMT +1:00"   >(GMT +1:00 hour) Brussels, Copenhagen, Madrid, Paris</option>
+                            <option value="GMT +2:00"   >(GMT +2:00) Kaliningrad, South Africa, Cairo</option>
+                            <option value="GMT +3:00"   >(GMT +3:00) Baghdad, Riyadh, Moscow, St. Petersburg</option>
+                            <option value="GMT +3:30" >(GMT +3:30) Tehran</option>
+                            <option value="GMT +4:00"   >(GMT +4:00) Abu Dhabi, Muscat, Yerevan, Baku, Tbilisi</option>
+                            <option value="GMT +4:30" >(GMT +4:30) Kabul</option>
+                            <option value="GMT +5:00"   >(GMT +5:00) Ekaterinburg, Islamabad, Karachi, Tashkent</option>
+                            <option value="GMT +5:30" >(GMT +5:30) Mumbai, Kolkata, Chennai, New Delhi</option>
+                            <option value="GMT +5:45">(GMT +5:45) Kathmandu</option>
+                            <option value="GMT +6:00"   >(GMT +6:00) Almaty, Dhaka, Colombo</option>
+                            <option value="GMT +6:30" >(GMT +6:30) Yangon, Cocos Islands</option>
+                            <option value="GMT +7:00"   >(GMT +7:00) Bangkok, Hanoi, Jakarta</option>
+                            <option value="GMT +8:00"   >(GMT +8:00) Beijing, Perth, Singapore, Hong Kong</option>
+                            <option value="GMT +9:00"   >(GMT +9:00) Tokyo, Seoul, Osaka, Sapporo, Yakutsk</option>
+                            <option value="GMT +9:30" >(GMT +9:30) Adelaide, Darwin</option>
+                            <option value="GMT +10:00"  >(GMT +10:00) Eastern Australia, Guam, Vladivostok</option>
+                            <option value="GMT +11:00"  >(GMT +11:00) Magadan, Solomon Islands, New Caledonia</option>
+                            <option value="GMT +12:00"  >(GMT +12:00) Auckland, Wellington, Fiji, Kamchatka</option>
+                        </select>
+                    
+                    <button class="save-btn">SAVE</button>
+                    <button class="cancel-btn">CANCEL</button>
+                
+                </div>
+            </form>    
+            </div>
+        
+        </main>
+
+        <footer>
+
+        </footer>
+        
+        <script src="scripts/scripts.js" ></script>
+        
+    </body>

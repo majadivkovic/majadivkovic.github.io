@@ -1,0 +1,258 @@
+/* ////////////////////// */
+/* //  MOBILE LAYOUT  /// */
+/* ////////////////////// */
+
+body{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas: 
+    " header "
+    " main   ";
+}
+
+main {
+    grid-area: main;
+    display:grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, 60px) auto repeat(4, 300px) 200px 350px 400px repeat(2, 350px);
+    grid-template-areas: 
+    " nav "
+    " title-search "
+    " alert "
+    " traffic "
+    " bar "
+    " donut"
+    " social "
+    " social"
+    " newmembers"
+    " recent"
+    " message"
+    " settings";
+}
+
+header {
+    position: sticky;
+    width: 100%;
+    height: 60px;
+    top: 0;
+}
+
+nav {
+    grid-area: nav;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    top: 60px;
+    background-color: rgb(40, 65, 94);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    z-index: 100;
+}
+
+/* SOCIAL GRID */
+
+.social-data {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "logo name"
+    "logo count";
+    justify-self: center;
+}
+
+.logo {
+    grid-area: logo;
+}
+.name {
+    grid-area: name;
+}
+
+.count {
+    grid-area:count;
+}
+
+.social-widget-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        width:90%;
+}
+
+/* ////////////////////// */
+/* ////  MEDIA QUERY  /// */
+/* ////////////////////// */
+
+@media(min-width: 768px) {
+
+    body{
+        display: grid;
+        grid-template-rows: 60px 1fr;
+        grid-template-areas: 
+        " header "
+        " main   ";
+    }
+    
+    main {
+        grid-area: main;
+        display:grid;
+        grid-template-columns: 60px 1fr 1fr;
+        grid-template-rows: 60px auto repeat(2, 350px) 250px repeat(2, 350px);
+        grid-template-areas:
+        "nav title-search title-search" 
+        "nav alert alert"
+        " nav traffic traffic"
+        " nav bar donut"
+        " nav social social"
+        " nav newmembers recent"
+        " nav message settings"
+    }
+    
+    header {
+        position: sticky;
+        width: 100%;
+        height: 60px;
+        top: 0;
+    }
+    
+
+    /* NAV STYLING */
+
+    nav {
+        position: fixed;
+        width: 60px ;
+        height: 100%;
+        left: 0;
+        background-color: rgb(40, 65, 94);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .icon {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    /* SOCIAL STYLE */
+
+    
+
+}
+
+
+
+@media(min-width: 1024px) {
+    
+}
+
+
+/* ////////////////////// */
+/* /////  SELECTORS  //// */
+/* ////////////////////// */
+
+
+
+.title-search {
+    grid-area: title-search;
+}
+
+.alert {
+    grid-area: alert;
+}
+
+.traffic {
+    grid-area:traffic;
+}
+
+.bar-graph {
+    grid-area:bar;
+}
+
+.donut {
+    grid-area:donut;
+}
+
+.social-stats {
+    grid-area:social;
+}
+
+.new-members {
+    grid-area:newmembers;
+}
+
+.recent {
+    grid-area:recent;
+}
+
+.message {
+    grid-area:message;
+}
+
+.settings {
+    grid-area:settings;
+}
+
+
+/* ////////////////////// */
+/* // SETTINGS SELECTORS /*/
+/* ////////////////////// */
+
+.settings h4 {
+    grid-area: settings-h4;
+}
+
+.notifications{
+    grid-area:notifications;
+}
+
+.switch1 {
+    grid-area: switch1;
+}
+
+.set-public {
+    grid-area: set-public;
+}
+
+.switch2 {
+    grid-area: switch2;
+}
+
+.save-btn {
+    grid-area:save-btn;
+}
+
+.cancel-btn {
+    grid-area:cancel-btn;
+}
+
+.settings select {
+    grid-area:settings-select;
+}
+
+
+/* ////////////////////// */
+/* // MESSAGES SELECTORS /*/
+/* ////////////////////// */
+
+.search-usr {
+    grid-area:search-usr;
+}
+
+.message-usr {
+    grid-area:message-usr;
+}
+
+.message button {
+    grid-area:send-message;
+}
+
+.message h4 {
+    grid-area:message-title;
+}
